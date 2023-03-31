@@ -1,0 +1,25 @@
+{
+  "name": "srako/webman-socialite",
+  "description": "Webman Socialite",
+  "homepage": "https://github.com/srako/webman-socialite",
+  "keywords": ["socialite","Webman", "QQ", "Sina","Wechat","DouYin","coding"],
+  "type": "library",
+  "require": {
+    "php": "^8.0",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^6.0|^7.0"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Webman\\Socialite\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "srako",
+      "email": "srakor@163.com"
+    }
+  ]
+}
