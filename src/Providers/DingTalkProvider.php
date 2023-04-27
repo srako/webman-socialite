@@ -116,8 +116,8 @@ class DingTalkProvider extends AbstractProvider
             Contracts\SOC_NAME => $user['nick'] ?? null,
             Contracts\SOC_NICKNAME => $user['nick'] ?? null,
             Contracts\SOC_ID => $user['unionId'],
-            Contracts\SOC_EMAIL => $user['email'],
-            Contracts\SOC_AVATAR => $user['avatarUrl'],
+            Contracts\SOC_EMAIL => $user['email'] ?? null,
+            Contracts\SOC_AVATAR => $user['avatarUrl'] ?? null,
         ]);
     }
 
