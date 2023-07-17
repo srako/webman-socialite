@@ -6,6 +6,7 @@
 
 namespace Webman\Socialite\Providers;
 
+use GuzzleHttp\Utils;
 use Webman\Socialite\AbstractUser;
 use Webman\Socialite\Exceptions;
 use Webman\Socialite\Contracts;
@@ -77,6 +78,13 @@ class DingTalkProvider extends AbstractProvider
                     ],
                 ]
             );
+            $resp = Utils::jsonEncode($response->getBody(), JSON_UNESCAPED_UNICODE);
+            if (!isset($resp->corpId) || $resp->corpId != $this->config->get('corp_id')) {
+                throw new Exceptions\AuthorizeFailedException(
+                    'Authorize Failed: 组织ID不匹配',
+                    (string)$response->getBody()
+                );
+            }
         } catch (\GuzzleHttp\Exception\BadResponseException $e) {
             if ($e->hasResponse()) {
                 $response = $e->getResponse();
