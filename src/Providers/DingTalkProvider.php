@@ -78,13 +78,6 @@ class DingTalkProvider extends AbstractProvider
                     ],
                 ]
             );
-            $resp = Utils::jsonEncode($response->getBody(), JSON_UNESCAPED_UNICODE);
-            if (!isset($resp->corpId) || $resp->corpId != $this->config->get('corp_id')) {
-                throw new Exceptions\AuthorizeFailedException(
-                    'Authorize Failed: 组织ID不匹配',
-                    (string)$response->getBody()
-                );
-            }
         } catch (\GuzzleHttp\Exception\BadResponseException $e) {
             if ($e->hasResponse()) {
                 $response = $e->getResponse();
@@ -92,8 +85,14 @@ class DingTalkProvider extends AbstractProvider
                 throw $e;
             }
         }
-
-        return $this->normalizeAccessTokenResponse($response->getBody());
+        $token = $this->normalizeAccessTokenResponse($response->getBody());
+        if (!isset($token['corpId']) || $token['corpId'] != $this->config->get('corp_id')) {
+            throw new Exceptions\AuthorizeFailedException(
+                'Authorize Failed: 组织ID不匹配',
+                $token
+            );
+        }
+        return $token;
     }
 
     /**
