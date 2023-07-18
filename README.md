@@ -1,5 +1,7 @@
 # webman-socialite
 
+[![Security Status](https://www.murphysec.com/platform3/v31/badge/1680891986389524480.svg)](https://www.murphysec.com/console/report/1680891985768767488/1680891986389524480)
+
 webman-socialite 是一个 [OAuth2](https://oauth.net/2/) 社会化认证工具。
 
 
