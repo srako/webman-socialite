@@ -10,9 +10,8 @@ use Webman\Socialite\Exceptions;
 use Webman\Socialite\Contracts;
 
 /**
- * @see http://mp.weixin.qq.com/wiki/9/01f711493b5a02f24b04365ac5d8fd95.html [WeChat - 公众平台OAuth文档]
- * @see https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=open1419316505&token=&lang=zh_CN
- *      [网站应用微信登录开发指南]
+ * @see https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_webpage_authorization.html [WeChat - 公众平台OAuth文档]
+ * @see https://developers.weixin.qq.com/doc/oplatform/Website_App/WeChat_Login/Wechat_Login.html [网站应用微信登录开发指南]
  */
 class WechatProvider extends AbstractProvider
 {
