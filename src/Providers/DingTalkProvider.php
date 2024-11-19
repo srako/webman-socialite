@@ -6,7 +6,6 @@
 
 namespace Webman\Socialite\Providers;
 
-use GuzzleHttp\Utils;
 use Webman\Socialite\AbstractUser;
 use Webman\Socialite\Exceptions;
 use Webman\Socialite\Contracts;
@@ -85,14 +84,7 @@ class DingTalkProvider extends AbstractProvider
                 throw $e;
             }
         }
-        $token = $this->normalizeAccessTokenResponse($response->getBody());
-        if (!isset($token['corpId']) || $token['corpId'] != $this->config->get('corp_id')) {
-            throw new Exceptions\AuthorizeFailedException(
-                'Authorize Failed: 组织ID不匹配',
-                $token
-            );
-        }
-        return $token;
+        return $this->normalizeAccessTokenResponse($response->getBody());
     }
 
     /**

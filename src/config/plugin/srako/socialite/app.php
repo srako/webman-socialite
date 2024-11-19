@@ -1,6 +1,9 @@
 <?php
 /**
- *
+ * 第三方授权配置项
+ * @author srako
+ * @date 2023/12/11 08:30
+ * @page http://srako.github.io
  */
 
  return [
