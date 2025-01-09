@@ -15,7 +15,7 @@ use Webman\Socialite\Contracts;
  */
 class DouYinProvider extends AbstractProvider
 {
-    public const NAME = 'douyin';
+    public const NAME = 'dou-yin';
 
     protected string $baseUrl = 'https://open.douyin.com';
 

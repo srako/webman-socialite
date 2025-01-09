@@ -10,7 +10,7 @@ use Webman\Socialite\Contracts;
 
 class QCloudProvider extends AbstractProvider
 {
-    public const NAME = 'qcloud';
+    public const NAME = 'q-cloud';
 
     protected array $scopes = ['login'];
 

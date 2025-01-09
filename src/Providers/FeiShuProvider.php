@@ -13,7 +13,7 @@ use Webman\Socialite\Contracts;
  */
 class FeiShuProvider extends AbstractProvider
 {
-    public const NAME = 'feishu';
+    public const NAME = 'fei-shu';
 
     private const APP_TICKET = 'app_ticket';
 

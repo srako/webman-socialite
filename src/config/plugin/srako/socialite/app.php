@@ -155,17 +155,7 @@
              'client_secret' => 'your-app-secret',
              'redirect' => 'http://your-callback-url',
          ],
-         'tou-tiao' => [
-             'client_id' => 'your-app-id',
-             'client_secret' => 'your-app-secret',
-             'redirect' => 'http://your-callback-url',
-         ],
          'wework' => [
-             'client_id' => 'your-app-id',
-             'client_secret' => 'your-app-secret',
-             'redirect' => 'http://your-callback-url',
-         ],
-         'xi-gua' => [
              'client_id' => 'your-app-id',
              'client_secret' => 'your-app-secret',
              'redirect' => 'http://your-callback-url',

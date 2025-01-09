@@ -18,7 +18,7 @@ use Webman\Socialite\Contracts;
  */
 class DingTalkProvider extends AbstractProvider
 {
-    public const NAME = 'dingtalk';
+    public const NAME = 'ding-talk';
 
     protected string $baseUrl = 'https://api.dingtalk.com/';
 
